@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="4dp"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1">
+
+        <ImageView
+            android:id="@+id/ivImage"
+            android:layout_width="53dp"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp"
+            android:src="@mipmap/book_flat"
+            android:layout_weight="0.09" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Book Title"
+                android:textColor="#003c50"
+                android:textAppearance="@android:style/TextAppearance.Small" />
+
+            <TextView
+                android:id="@+id/tv_creationdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/tertiary_text_light"
+                android:text="Creation Date: July 3, 1962" />
+
+            <TextView
+                android:id="@+id/tv_author"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Author: Michael Jackson"
+                android:textColor="@android:color/tertiary_text_light"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:singleLine="false" />
+
+            <TextView
+                android:id="@+id/tv_publisher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/tertiary_text_light"
+                android:text="Publisher: The National Libary" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
