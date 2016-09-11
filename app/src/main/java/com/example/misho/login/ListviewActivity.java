@@ -4,6 +4,7 @@ import android.annotation.TargetApi;
 import android.app.ActionBar;
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.net.ParseException;
 import android.os.AsyncTask;
 import android.os.Build;
@@ -14,6 +15,8 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
+//import com.example.misho.login.Item.ViewPagerActivity;
+import  com.example.misho.login.Item.ViewPagerActivity;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -32,7 +35,7 @@ public class ListviewActivity extends Activity {
 
     ArrayList<Book> bookList;
     String myURL="any";
-
+    private String ID;
     bookAdapter adapter;
 
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
@@ -63,6 +66,13 @@ public class ListviewActivity extends Activity {
                                     long id) {
                 // TODO Auto-generated method stub
                 Toast.makeText(getApplicationContext(), bookList.get(position).getRecordid(), Toast.LENGTH_LONG).show();
+                //Intent intent = getIntent();
+                //ID = intent.getStringExtra("recordID");
+                ID = "nananana";
+                Intent intent1=new Intent(getApplicationContext(),ViewPagerActivity.class);
+                intent1.putExtra("recordID",ID);
+                startActivity(intent1);
+
             }
         });
     }

@@ -38,6 +38,15 @@
         <activity android:name=".ListviewActivity"
             android:windowSoftInputMode="stateHidden">
         </activity>
+        <activity android:name=".Item.MainActivity"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+        <activity android:name=".Item.ViewPagerActivity"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+        <activity android:name=".Item.ZoomableActivity"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
 
     </application>
 
