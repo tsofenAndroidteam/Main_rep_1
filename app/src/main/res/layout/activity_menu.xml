@@ -15,16 +15,16 @@
         android:layout_weight="10">
 
         <TextView
-            android:layout_width="147dp"
-            android:layout_height="36dp"
+            android:layout_width="248dp"
+            android:layout_height="35dp"
             android:text="shalom.weiss@gmail.com"
             android:id="@+id/textView"
             android:layout_gravity="right|bottom"
             android:textSize="10dp" />
 
         <TextView
-            android:layout_width="145dp"
-            android:layout_height="40dp"
+            android:layout_width="246dp"
+            android:layout_height="wrap_content"
             android:text="Shalom Weiss"
             android:id="@+id/tv_fullname"
             android:layout_gravity="right|center_vertical"
@@ -36,7 +36,7 @@
             android:layout_height="89dp"
             android:id="@+id/imageView"
             android:layout_gravity="left|center_vertical"
-            android:src="@drawable/profile_circle"
+            android:src="@drawable/menu_top"
             />
 
         <ImageView
@@ -51,7 +51,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:onClick="search"
-        android:background="#e0b26d"
+        android:background="@color/colorSearch"
         android:layout_weight="10">
 
         <TextView
@@ -65,7 +65,7 @@
             android:textIsSelectable="false" />
 
         <ImageView
-            android:layout_width="70dp"
+            android:layout_width="40dp"
             android:layout_height="wrap_content"
             android:id="@+id/imageView3"
             android:layout_gravity="left|center_vertical"
@@ -76,9 +76,10 @@
     </FrameLayout>
 
     <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="82dp"
-        android:background="#7ec59d">
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#7ec59d"
+        android:layout_weight="10">
 
         <TextView
             android:layout_width="wrap_content"
@@ -90,7 +91,7 @@
             android:textSize="25dp" />
 
         <ImageView
-            android:layout_width="70dp"
+            android:layout_width="40dp"
             android:layout_height="wrap_content"
             android:id="@+id/menu_fav_imageview"
             android:layout_gravity="left|center_vertical"
@@ -101,8 +102,9 @@
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="76dp"
-        android:background="#4aaab5">
+        android:layout_height="wrap_content"
+        android:background="#4aaab5"
+        android:layout_weight="10">
 
         <TextView
             android:layout_width="wrap_content"
@@ -114,7 +116,7 @@
             android:textSize="25dp" />
 
         <ImageView
-            android:layout_width="70dp"
+            android:layout_width="40dp"
             android:layout_height="wrap_content"
             android:id="@+id/imageView4"
             android:layout_gravity="left|center_vertical"
@@ -123,9 +125,9 @@
     </FrameLayout>
 
     <FrameLayout
-        android:layout_width="match_parent"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="20"
+        android:layout_weight="10"
         android:background="#7775ad">
 
         <TextView

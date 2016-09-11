@@ -2,25 +2,25 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:weightSum="1">
+    android:weightSum="100">
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="0.03"
-        android:background="#e0b26d"
-        android:focusable="true">
+        android:background="@color/colorSearch"
+        android:focusable="false"
+        android:layout_weight="1">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="211dp"
             android:layout_height="wrap_content"
-            android:text="Search"
+            android:text="Search By Title"
             android:id="@+id/searchtitle"
             android:singleLine="false"
             android:textStyle="bold|normal"
-            android:textSize="@dimen/abc_action_bar_default_height_material"
             android:layout_gravity="center"
-            android:textColor="#ffffff" />
+            android:textColor="#ffffff"
+            android:textSize="25dp" />
 
         <ImageView
             android:layout_width="54dp"
@@ -53,9 +53,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="searchfunct"
-        android:text="Search"
+        android:text="Go!"
         android:id="@+id/searchbtn"
         android:layout_gravity="right"
-        android:background="#e0b26d"
-        android:textColor="#ffffff" />
+        android:background="@color/colorSearch"
+        android:textColor="#ffffff"
+        android:textStyle="bold" />
 </LinearLayout>
