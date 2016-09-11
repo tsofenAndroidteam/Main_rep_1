@@ -19,8 +19,16 @@
             android:singleLine="false"
             android:textStyle="bold|normal"
             android:textSize="@dimen/abc_action_bar_default_height_material"
-            android:layout_gravity="left|top"
+            android:layout_gravity="center"
             android:textColor="#ffffff" />
+
+        <ImageView
+            android:layout_width="54dp"
+            android:layout_height="55dp"
+            android:id="@+id/imageView5"
+            android:layout_gravity="left|center_vertical"
+            android:src="@drawable/menu_search"
+            android:paddingLeft="10dp" />
     </FrameLayout>
 
     <EditText

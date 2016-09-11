@@ -51,8 +51,8 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:onClick="search"
-        android:background="@android:color/holo_orange_light"
-        android:layout_weight="20">
+        android:background="#e0b26d"
+        android:layout_weight="10">
 
         <TextView
             android:layout_width="wrap_content"
@@ -64,12 +64,20 @@
             android:textSize="25dp"
             android:textIsSelectable="false" />
 
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView3"
+            android:layout_gravity="left|center_vertical"
+            android:src="@drawable/menu_search"
+            android:paddingLeft="10dp"
+            android:adjustViewBounds="true" />
+
     </FrameLayout>
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="20"
+        android:layout_height="82dp"
         android:background="#7ec59d">
 
         <TextView
@@ -82,18 +90,18 @@
             android:textSize="25dp" />
 
         <ImageView
-            android:layout_width="64dp"
-            android:layout_height="65dp"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
             android:id="@+id/menu_fav_imageview"
             android:layout_gravity="left|center_vertical"
             android:src="@drawable/menu_fav"
-            android:contentDescription="menu_fav star" />
+            android:contentDescription="menu_fav star"
+            android:paddingLeft="10dp" />
     </FrameLayout>
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="20"
+        android:layout_height="76dp"
         android:background="#4aaab5">
 
         <TextView
@@ -104,6 +112,14 @@
             android:layout_gravity="center"
             android:textColor="#ffffff"
             android:textSize="25dp" />
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView4"
+            android:layout_gravity="left|center_vertical"
+            android:src="@drawable/menu_trivia"
+            android:paddingLeft="10dp" />
     </FrameLayout>
 
     <FrameLayout
