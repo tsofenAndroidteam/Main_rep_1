@@ -119,9 +119,6 @@ import java.util.List;
 
 import static android.Manifest.permission.READ_CONTACTS;
 
-/**
- * Created by Mostafa on 9/8/2016.
- */
 public class MainActivity extends AppCompatActivity {
 
 
@@ -131,6 +128,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
+
 
         Intent intent = getIntent();
         ID = intent.getStringExtra("recordID");
