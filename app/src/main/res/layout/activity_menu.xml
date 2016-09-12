@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
 
     tools:context="com.example.misho.login.Menu"
     android:orientation="vertical"
     android:padding="0dp"
-    android:weightSum="100">
+    android:weightSum="100"
+    android:baselineAligned="false"
+    android:background="@drawable/menu_backback">
 
     <LinearLayout
         android:orientation="horizontal"
@@ -16,7 +18,8 @@
 
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="136dp">
+            android:layout_height="136dp"
+            android:clickable="true">
 
             <TextView
                 android:layout_width="176dp"
@@ -51,7 +54,8 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="23.95" >
+        android:layout_weight="23.95"
+        android:alpha="0.7">
 
         <FrameLayout
             android:layout_width="0dp"
@@ -109,6 +113,7 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:alpha="0.7"
         android:layout_weight="23.95" >
 
         <FrameLayout
@@ -162,11 +167,62 @@
         </FrameLayout>
     </LinearLayout>
 
-    <Button
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:text="MyRipplebutton"
-        android:background="@drawable/rippleorange"/>
+        android:layout_height="wrap_content"
+        android:alpha="0.7"
+        android:layout_weight="23.95" >
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:layout_weight="0.5"
+            android:background="#ff5d5d">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="About"
+                android:id="@+id/textView9"
+                android:layout_gravity="center_horizontal|bottom"
+                android:textColor="#ffffff"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="77dp"
+                android:layout_height="64dp"
+                android:id="@+id/imageView9"
+                android:layout_gravity="center"
+                android:src="@drawable/menu_big_fav" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:clickable="true"
+            android:background="#5badff">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Settings"
+                android:id="@+id/textView10"
+                android:layout_gravity="center_horizontal|bottom"
+                android:textColor="#ffffff"
+                android:textSize="20dp" />
+
+            <ImageView
+                android:layout_width="77dp"
+                android:layout_height="64dp"
+                android:id="@+id/imageView10"
+                android:layout_gravity="center"
+                android:src="@drawable/menu_big_trivia" />
+        </FrameLayout>
+    </LinearLayout>
 
 
 </LinearLayout>
