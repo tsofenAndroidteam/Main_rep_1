@@ -12,14 +12,21 @@
         android:background="@color/colorSearch">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="181dp"
             android:layout_height="wrap_content"
             android:text="Search Results:"
-            android:layout_gravity="left|center_vertical"
+            android:layout_gravity="center"
             android:id="@+id/tv_title"
             android:textColor="#ffffff"
             android:textAppearance="@android:style/TextAppearance.Large"
             android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="88dp"
+            android:layout_height="43dp"
+            android:id="@+id/imageView7"
+            android:layout_gravity="left|center_vertical"
+            android:src="@drawable/menu_big_search" />
     </FrameLayout>
 
     <ListView

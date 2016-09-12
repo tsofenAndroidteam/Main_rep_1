@@ -27,7 +27,7 @@
             android:layout_height="55dp"
             android:id="@+id/imageView5"
             android:layout_gravity="left|center_vertical"
-            android:src="@drawable/menu_search"
+            android:src="@drawable/menu_big_search"
             android:paddingLeft="10dp" />
     </FrameLayout>
 

@@ -3,7 +3,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:weightSum="1"
-    android:background="#e0b26d">
+    android:background="@drawable/gardient">
 
 
     <FrameLayout
@@ -35,7 +35,9 @@
         android:layout_gravity="center_horizontal"
         android:text="New Text"
         android:id="@+id/textView"
-        android:layout_weight="1.42" />
+        android:layout_weight="1.42"
+        android:background="@color/black"
+        android:textColor="#ffffff" />
 
 
 </LinearLayout>

@@ -10,4 +10,6 @@
     <color name="buttonColor">#f0878787</color>
     <color name="buttonClickColor">#f0878787</color>
     <color name="colorSearch">#e0b26d</color>
+    <color name="gradient_start1">#ffffff</color>
+    <color name="gradient_end1">#c7c7c7</color>
 </resources>

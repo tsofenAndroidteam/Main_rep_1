@@ -9,134 +9,176 @@
     android:padding="0dp"
     android:weightSum="100">
 
-    <FrameLayout
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="136dp">
+
+            <TextView
+                android:layout_width="176dp"
+                android:layout_height="55dp"
+                android:text="shalom.weiss@gmail.com"
+                android:id="@+id/textView"
+                android:layout_gravity="right|bottom"
+                android:textSize="10dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="179dp"
+                android:layout_height="wrap_content"
+                android:text="Shalom Weiss"
+                android:id="@+id/tv_fullname"
+                android:layout_gravity="right|center_vertical"
+                android:textSize="20dp"
+                android:autoText="false"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="147dp"
+                android:layout_height="93dp"
+                android:id="@+id/imageView2"
+                android:src="@drawable/kirill_avatar_circle_live"
+                android:layout_gravity="left|center_vertical" />
+
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="10">
+        android:layout_weight="28.88">
 
-        <TextView
-            android:layout_width="248dp"
-            android:layout_height="35dp"
-            android:text="shalom.weiss@gmail.com"
-            android:id="@+id/textView"
-            android:layout_gravity="right|bottom"
-            android:textSize="10dp" />
-
-        <TextView
-            android:layout_width="246dp"
-            android:layout_height="wrap_content"
-            android:text="Shalom Weiss"
-            android:id="@+id/tv_fullname"
-            android:layout_gravity="right|center_vertical"
-            android:textSize="20dp"
-            android:autoText="false" />
-
-        <ImageView
-            android:layout_width="106dp"
-            android:layout_height="89dp"
-            android:id="@+id/imageView"
-            android:layout_gravity="left|center_vertical"
-            android:src="@drawable/menu_top"
-            />
-
-        <ImageView
+        <FrameLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/imageView2"
-            android:layout_gravity="left|bottom" />
+            android:layout_height="match_parent"
+            android:onClick="search"
+            android:layout_weight="0.22"
+            android:background="@color/colorSearch">
 
-    </FrameLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Search"
+                android:id="@+id/textView2"
+                android:layout_gravity="center_horizontal|bottom"
+                android:textColor="#ffffff"
+                android:textSize="25dp"
+                android:textIsSelectable="false" />
 
-    <FrameLayout
-        android:layout_width="fill_parent"
+            <ImageView
+                android:layout_width="89dp"
+                android:layout_height="81dp"
+                android:id="@+id/imageView3"
+                android:layout_gravity="center"
+                android:src="@drawable/menu_big_search"
+                android:paddingLeft="10dp"
+                android:adjustViewBounds="true" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="148dp"
+            android:layout_height="match_parent"
+            android:background="#7ec59d"
+            android:layout_weight="0.10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Favorites"
+                android:id="@+id/textView3"
+                android:layout_gravity="center_horizontal|bottom"
+                android:textColor="#ffffff"
+                android:textSize="25dp" />
+
+            <ImageView
+                android:layout_width="89dp"
+                android:layout_height="81dp"
+                android:id="@+id/menu_fav_imageview"
+                android:layout_gravity="center"
+                android:src="@drawable/menu_big_fav"
+                android:contentDescription="menu_fav star"
+                android:paddingLeft="10dp"
+                android:adjustViewBounds="true" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="search"
-        android:background="@color/colorSearch"
-        android:layout_weight="10">
+        android:layout_weight="23.95" >
 
-        <TextView
+        <FrameLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Search"
-            android:id="@+id/textView2"
-            android:layout_gravity="center"
-            android:textColor="#ffffff"
-            android:textSize="25dp"
-            android:textIsSelectable="false" />
+            android:layout_height="match_parent"
+            android:onClick="search"
+            android:layout_weight="0.5"
+            android:background="#7775ad" >
 
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/imageView3"
-            android:layout_gravity="left|center_vertical"
-            android:src="@drawable/menu_search"
-            android:paddingLeft="10dp"
-            android:adjustViewBounds="true" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bibliography"
+                android:id="@+id/textView5"
+                android:layout_gravity="center_horizontal|bottom"
+                android:textColor="#ffffff"
+                android:textSize="25dp" />
 
-    </FrameLayout>
+            <ImageView
+                android:layout_width="89dp"
+                android:layout_height="81dp"
+                android:id="@+id/imageView6"
+                android:layout_gravity="center"
+                android:src="@drawable/menu_big_bibilo" />
+        </FrameLayout>
 
-    <FrameLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:background="#7ec59d"
-        android:layout_weight="10">
+        <FrameLayout
+            android:layout_width="153dp"
+            android:layout_height="match_parent"
+            android:background="#4aaab5"
+            android:layout_weight="0.40" >
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Favorites"
-            android:id="@+id/textView3"
-            android:layout_gravity="center"
-            android:textColor="#ffffff"
-            android:textSize="25dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Trivia"
+                android:id="@+id/textView8"
+                android:layout_gravity="center_horizontal|bottom"
+                android:textColor="#ffffff"
+                android:textSize="25dp" />
 
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/menu_fav_imageview"
-            android:layout_gravity="left|center_vertical"
-            android:src="@drawable/menu_fav"
-            android:contentDescription="menu_fav star"
-            android:paddingLeft="10dp" />
-    </FrameLayout>
+            <ImageView
+                android:layout_width="89dp"
+                android:layout_height="81dp"
+                android:id="@+id/imageView4"
+                android:layout_gravity="center"
+                android:src="@drawable/menu_big_trivia"
+                android:paddingLeft="10dp" />
+
+        </FrameLayout>
+    </LinearLayout>
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#4aaab5"
-        android:layout_weight="10">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Trivia"
-            android:id="@+id/textView4"
-            android:layout_gravity="center"
-            android:textColor="#ffffff"
-            android:textSize="25dp" />
-
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/imageView4"
-            android:layout_gravity="left|center_vertical"
-            android:src="@drawable/menu_trivia"
-            android:paddingLeft="10dp" />
-    </FrameLayout>
-
-    <FrameLayout
-        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_weight="10"
+        android:clickable="true"
+        android:background="#3381ff">
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="10.66"
         android:background="#7775ad">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Bibliography"
-            android:id="@+id/textView5"
-            android:layout_gravity="center"
-            android:textColor="#ffffff"
-            android:textSize="25dp" />
     </FrameLayout>
 </LinearLayout>

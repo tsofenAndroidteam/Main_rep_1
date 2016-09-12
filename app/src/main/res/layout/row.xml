@@ -9,14 +9,15 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:weightSum="1">
+        android:weightSum="1"
+        android:background="@drawable/gardient">
 
         <ImageView
             android:id="@+id/ivImage"
             android:layout_width="53dp"
             android:layout_height="match_parent"
             android:layout_margin="8dp"
-            android:src="@mipmap/book_flat"
+            android:src="@drawable/book_flat"
             android:layout_weight="0.09" />
 
         <LinearLayout

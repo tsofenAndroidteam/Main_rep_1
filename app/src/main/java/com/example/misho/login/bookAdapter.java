@@ -47,11 +47,11 @@ public class bookAdapter extends ArrayAdapter<Book> {
         }
         //holder.imageview.setImageResource(R.drawable.ic_launcher);
         //new DownloadImageTask(holder.imageview).execute(actorList.get(position).getImage());
-        holder.title.setText(actorList.get(position).getTitle());
+        holder.title.setText("Title: " +actorList.get(position).getTitle());
         //holder.tvDescription.setText(actorList.get(position).getDescription());
-        holder.creationdate.setText("Creation Date:: " + actorList.get(position).getCreationdate());
+        holder.creationdate.setText("Creation Date: " + actorList.get(position).getCreationdate());
         holder.publisher.setText(actorList.get(position).getPublisher());
-        holder.author.setText("Author:: " + actorList.get(position).getAuthor());
+        holder.author.setText("Author: " + actorList.get(position).getAuthor());
         return v;
 
     }
