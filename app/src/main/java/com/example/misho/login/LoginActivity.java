@@ -340,7 +340,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
             try {
                 final String FORECAST_BASE_URL =
-                        "http://52.29.110.203:8080/LibArab/signIn/doSignIn?";
+                        Params.server + "signIn/doSignIn?";
 
                 final String USER_PARAM = "username";
                 final String PASS_PARAM = "password";
