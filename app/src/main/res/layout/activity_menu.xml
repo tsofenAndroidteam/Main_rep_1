@@ -51,62 +51,58 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="28.88">
+        android:layout_weight="23.95" >
 
         <FrameLayout
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:onClick="search"
-            android:layout_weight="0.22"
-            android:background="@color/colorSearch">
+            android:background="@drawable/rippleorange"
+            android:clickable="true"
+            android:layout_weight="0.5"
+            android:onClick="search">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Search"
-                android:id="@+id/textView2"
+                android:id="@+id/textView8"
                 android:layout_gravity="center_horizontal|bottom"
                 android:textColor="#ffffff"
-                android:textSize="25dp"
-                android:textIsSelectable="false" />
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:onClick="search" />
 
             <ImageView
-                android:layout_width="89dp"
-                android:layout_height="81dp"
-                android:id="@+id/imageView3"
+                android:layout_width="77dp"
+                android:layout_height="64dp"
+                android:id="@+id/imageView4"
                 android:layout_gravity="center"
-                android:src="@drawable/menu_big_search"
-                android:paddingLeft="10dp"
-                android:adjustViewBounds="true" />
+                android:src="@drawable/menu_big_trivia" />
 
         </FrameLayout>
-
         <FrameLayout
-            android:layout_width="148dp"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:background="#7ec59d"
-            android:layout_weight="0.10">
+            android:layout_weight="0.5"
+            android:clickable="true"
+            android:background="@drawable/ripplepurple">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Favorites"
-                android:id="@+id/textView3"
+                android:text="Bibliography"
+                android:id="@+id/textView5"
                 android:layout_gravity="center_horizontal|bottom"
                 android:textColor="#ffffff"
-                android:textSize="25dp" />
+                android:textSize="20dp" />
 
             <ImageView
-                android:layout_width="89dp"
-                android:layout_height="81dp"
-                android:id="@+id/menu_fav_imageview"
+                android:layout_width="77dp"
+                android:layout_height="64dp"
+                android:id="@+id/imageView6"
                 android:layout_gravity="center"
-                android:src="@drawable/menu_big_fav"
-                android:contentDescription="menu_fav star"
-                android:paddingLeft="10dp"
-                android:adjustViewBounds="true" />
+                android:src="@drawable/menu_big_bibilo" />
         </FrameLayout>
-
     </LinearLayout>
 
     <LinearLayout
@@ -116,69 +112,61 @@
         android:layout_weight="23.95" >
 
         <FrameLayout
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:onClick="search"
-            android:layout_weight="0.5"
-            android:background="#7775ad" >
+            android:background="@drawable/ripplegreen"
+            android:clickable="true"
+            android:layout_weight="0.5">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Bibliography"
-                android:id="@+id/textView5"
+                android:text="Favorites"
+                android:id="@+id/textView6"
                 android:layout_gravity="center_horizontal|bottom"
                 android:textColor="#ffffff"
-                android:textSize="25dp" />
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:onClick="search" />
 
             <ImageView
-                android:layout_width="89dp"
-                android:layout_height="81dp"
-                android:id="@+id/imageView6"
+                android:layout_width="77dp"
+                android:layout_height="64dp"
+                android:id="@+id/imageView7"
                 android:layout_gravity="center"
-                android:src="@drawable/menu_big_bibilo" />
+                android:src="@drawable/menu_big_fav" />
         </FrameLayout>
 
         <FrameLayout
-            android:layout_width="153dp"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:background="#4aaab5"
-            android:layout_weight="0.40" >
+            android:layout_weight="0.5"
+            android:clickable="true"
+            android:background="@drawable/rippleblue" >
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Trivia"
-                android:id="@+id/textView8"
+                android:id="@+id/textView7"
                 android:layout_gravity="center_horizontal|bottom"
                 android:textColor="#ffffff"
-                android:textSize="25dp" />
+                android:textSize="20dp" />
 
             <ImageView
-                android:layout_width="89dp"
-                android:layout_height="81dp"
-                android:id="@+id/imageView4"
+                android:layout_width="77dp"
+                android:layout_height="64dp"
+                android:id="@+id/imageView8"
                 android:layout_gravity="center"
-                android:src="@drawable/menu_big_trivia"
-                android:paddingLeft="10dp" />
-
+                android:src="@drawable/menu_big_trivia" />
         </FrameLayout>
     </LinearLayout>
 
-    <FrameLayout
+    <Button
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="10"
-        android:clickable="true"
-        android:background="#3381ff">
+        android:layout_height="50dp"
+        android:text="MyRipplebutton"
+        android:background="@drawable/rippleorange"/>
 
-    </FrameLayout>
 
-    <FrameLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="10.66"
-        android:background="#7775ad">
-
-    </FrameLayout>
 </LinearLayout>

@@ -8,31 +8,34 @@
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="53dp"
-        android:background="@color/colorSearch">
+        android:layout_height="wrap_content"
+        android:background="@color/colorSearch"
+        android:focusable="false">
 
         <TextView
-            android:layout_width="181dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Search Results:"
+            android:text="Search By Title"
+            android:id="@+id/textView3"
+            android:singleLine="false"
+            android:textStyle="bold|normal"
             android:layout_gravity="center"
-            android:id="@+id/tv_title"
             android:textColor="#ffffff"
-            android:textAppearance="@android:style/TextAppearance.Large"
-            android:textStyle="bold" />
+            android:textSize="25dp" />
 
         <ImageView
-            android:layout_width="88dp"
-            android:layout_height="43dp"
-            android:id="@+id/imageView7"
+            android:layout_width="54dp"
+            android:layout_height="55dp"
+            android:id="@+id/imageView"
             android:layout_gravity="left|center_vertical"
-            android:src="@drawable/menu_big_search" />
+            android:src="@drawable/menu_big_search"
+            android:paddingLeft="10dp" />
     </FrameLayout>
 
     <ListView
         android:id="@+id/list"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="484dp"
         tools:listitem="@layout/row" >
 
     </ListView>

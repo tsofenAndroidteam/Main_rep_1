@@ -8,17 +8,28 @@
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:background="#e0b26d">
+        android:layout_height="wrap_content"
+        android:background="@color/colorSearch"
+        android:focusable="false" >
 
         <TextView
-            android:layout_width="221dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Book Viewer"
-            android:id="@+id/textView6"
+            android:id="@+id/textView4"
+            android:singleLine="false"
+            android:textStyle="bold|normal"
             android:layout_gravity="center"
             android:textColor="#ffffff"
             android:textSize="25dp" />
+
+        <ImageView
+            android:layout_width="54dp"
+            android:layout_height="55dp"
+            android:id="@+id/imageView3"
+            android:layout_gravity="left|center_vertical"
+            android:src="@drawable/menu_big_search"
+            android:paddingLeft="10dp" />
     </FrameLayout>
 
     <android.support.v4.view.ViewPager
