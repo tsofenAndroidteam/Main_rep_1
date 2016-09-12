@@ -212,8 +212,8 @@ public class SignUp extends AppCompatActivity {
             String serverJsonStr = null;
 
             try {
-                final String Server_BASE_URL =
-                        "http://52.29.110.203:8080/LibArab/SignUp/dosignup?";
+                final String Server_BASE_URL = Params.server +
+                        "SignUp/dosignup?";
 
                 final String USER_PARAM = "username";
                 final String PASS_PARAM = "password";
