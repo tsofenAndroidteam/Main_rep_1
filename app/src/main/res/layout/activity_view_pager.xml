@@ -3,13 +3,13 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:weightSum="1"
-    android:background="@drawable/gardient">
+    android:background="@color/accent_material_light">
 
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorSearch"
+        android:background="@color/accent_material_light"
         android:focusable="false" >
 
         <TextView
@@ -24,12 +24,13 @@
             android:textSize="25dp" />
 
         <ImageView
-            android:layout_width="54dp"
-            android:layout_height="55dp"
-            android:id="@+id/imageView3"
-            android:layout_gravity="left|center_vertical"
-            android:src="@drawable/menu_big_search"
-            android:paddingLeft="10dp" />
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/imageView11"
+            android:layout_gravity="right|center_vertical"
+            android:src="@drawable/book_info"
+            android:layout_marginRight="10dp" />
+
     </FrameLayout>
 
     <android.support.v4.view.ViewPager
@@ -40,15 +41,42 @@
         android:layout_weight="0.87" />
 
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="New Text"
-        android:id="@+id/textView"
-        android:layout_weight="1.42"
-        android:background="@color/black"
-        android:textColor="#ffffff" />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="83dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="New Text"
+            android:id="@+id/textView"
+            android:textColor="#ffffff"
+            android:background="@android:drawable/zoom_plate" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_gravity="center_horizontal|bottom">
+
+            <Button
+                android:layout_width="30dp"
+                android:layout_height="24dp"
+                android:text="Go"
+                android:id="@+id/btn_changepage"
+                android:layout_gravity="right|bottom"
+                android:onClick="changepage"
+                android:textSize="4dp" />
+
+            <EditText
+                android:layout_width="70dp"
+                android:layout_height="24dp"
+                android:id="@+id/et_changepage"
+                android:layout_gravity="left|bottom" />
+
+        </FrameLayout>
+
+    </FrameLayout>
 
 
 </LinearLayout>

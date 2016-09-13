@@ -13,6 +13,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.misho.login.R;
+import com.example.misho.login.SearchActivity;
 import com.facebook.common.logging.FLog;
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.facebook.drawee.drawable.ProgressBarDrawable;
@@ -157,24 +158,32 @@ public class ViewPagerActivity extends AppCompatActivity {
     private ViewItemTask mAuthTask = null;
     int i = 0;
     int j = 0;
-
-
-
     ViewPager vpGallery;
+    EditText etchange;
+    TextView textView1;
 
+    public void changepage(View v){
+
+        String stringnumber = etchange.getText().toString();
+        if (!(stringnumber.matches(""))) {
+            vpGallery.setCurrentItem(Integer.parseInt(stringnumber) - 1);
+            textView1.setText(Integer.parseInt(stringnumber)  + "/" + pagesStr.size());
+            //// TODO: 13/09/16 fix page number after change ( Mostafa ) 
+        }
+
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Fresco.initialize(this);
         FLog.setMinimumLoggingLevel(FLog.VERBOSE);
-
         setContentView(R.layout.activity_view_pager);
-
+        etchange =(EditText)findViewById(R.id.et_changepage);
+        textView1=(TextView) findViewById(R.id.textView);
         Intent intent = getIntent();
         // ID = intent.getStringExtra("recordID");
         mAuthTask = new ViewItemTask(ID);
         mAuthTask.execute((Void) null);
-
 
     }
 
@@ -354,10 +363,10 @@ public class ViewPagerActivity extends AppCompatActivity {
         @Override
         public Object instantiateItem(ViewGroup container, int position) {
 
-            TextView textView1=(TextView) findViewById(R.id.textView);
+
             if(j==0) {
                 textView1.setText(position + "/" + items.size());
-                textView1.setTextSize(25);
+                textView1.setTextSize(20);
                 if(position==items.size()-1){
                     i=1;
                 }
@@ -366,9 +375,6 @@ public class ViewPagerActivity extends AppCompatActivity {
                 textView1.setText(items.size()-1 + "/" + items.size());
                 j=0;
             }
-
-
-
 
             ZoomableDraweeView view = new ZoomableDraweeView(container.getContext());
             view.setController(
@@ -396,7 +402,7 @@ public class ViewPagerActivity extends AppCompatActivity {
 
         @Override
         public void destroyItem(ViewGroup container, int position, Object object) {
-            TextView textView1=(TextView) findViewById(R.id.textView);
+
             if(i==0){
                 textView1.setText((position - 1) + "/" + items.size());
 

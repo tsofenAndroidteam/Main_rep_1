@@ -26,4 +26,8 @@ public class Menu extends AppCompatActivity {
         Intent searchactivity = new Intent(this,SearchActivity.class);
         startActivity(searchactivity);
     }
+    public void about(View v){
+        Intent abouthactivity = new Intent(this,About.class);
+        startActivity(abouthactivity);
+    }
 }

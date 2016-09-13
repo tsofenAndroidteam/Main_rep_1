@@ -2,7 +2,7 @@
 <resources>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#000000</color>
-    <color name="colorAccent">#66BB6A</color>
+    <color name="colorAccent">#93c195</color>
     <color name="colorBackground">#37474F</color>
     <color name="black">#000000</color>
     <color name="indigo_blue">#3F51B5</color>
@@ -12,6 +12,7 @@
     <color name="colorSearch">#e0b26d</color>
     <color name="colorBibilo">#7775ad</color>
     <color name="colorFav">#66BB6A</color>
+    <color name="colorAbout">#ff5d5d</color>
     <color name="colorTrivia">#49a9b4</color>
     <color name="gradient_start1">#ffffff</color>
     <color name="gradient_end1">#c7c7c7</color>
