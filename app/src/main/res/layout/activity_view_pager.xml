@@ -11,9 +11,14 @@
         android:layout_height="wrap_content"
         android:background="@color/accent_material_light"
         android:focusable="false" >
+        <com.github.ivbaranov.mfb.MaterialFavoriteButton
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="3dp" />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:text="Book Viewer"
             android:id="@+id/textView4"
@@ -29,7 +34,8 @@
             android:id="@+id/imageView11"
             android:layout_gravity="right|center_vertical"
             android:src="@drawable/book_info"
-            android:layout_marginRight="10dp" />
+            android:layout_marginRight="10dp"
+            android:onClick="bookinfo" />
 
     </FrameLayout>
 

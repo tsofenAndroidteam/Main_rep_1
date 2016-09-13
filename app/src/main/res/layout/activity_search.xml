@@ -30,10 +30,6 @@
             android:paddingLeft="10dp" />
     </FrameLayout>
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"></FrameLayout>
-
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"

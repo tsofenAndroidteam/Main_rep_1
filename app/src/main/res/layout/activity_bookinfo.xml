@@ -1,0 +1,111 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:weightSum="1"
+    android:background="@color/accent_material_light">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/accent_material_light"
+        android:focusable="false" >
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Book Info"
+            android:id="@+id/textView4"
+            android:singleLine="false"
+            android:textStyle="bold|normal"
+            android:layout_gravity="center"
+            android:textColor="#ffffff"
+            android:textSize="25dp" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/imageView11"
+            android:layout_gravity="right|center_vertical"
+            android:src="@drawable/book_info"
+            android:layout_marginRight="10dp" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:paddingTop="50dp" >
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="214dp"
+            android:layout_weight="0.8" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Author:   محمد ميقاتي (صاحب المعمل)"
+                android:id="@+id/textView12"
+                android:textColor="#ffff"
+                android:textSize="15dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Title:   اعلان من معمل السجائر الوطنية"
+                android:id="@+id/textView13"
+                android:textColor="#ffff"
+                android:textSize="15dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Publisher: معمل السجائر الوطنية لصاحبها محمد ميقاتي"
+                android:id="@+id/textView14"
+                android:textColor="#ffff"
+                android:textSize="15dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Creation Date:   1938"
+                android:id="@+id/textView15"
+                android:textColor="#ffff"
+                android:textSize="15dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Source:   Ephemera Collection - The National Library of Israel"
+                android:id="@+id/textView16"
+                android:textColor="#ffff"
+                android:textSize="15dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="101dp"
+                android:text=" Web Link:   http://primo.nli.org.il/primo_library/libweb/action/dlDisplay.do?vid=NNL_Ephemera&amp;docId=NNL_Ephemera700072300"
+                android:id="@+id/textView17"
+                android:textColor="#ffff" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1" />
+    </LinearLayout>
+
+
+</LinearLayout>
+
+

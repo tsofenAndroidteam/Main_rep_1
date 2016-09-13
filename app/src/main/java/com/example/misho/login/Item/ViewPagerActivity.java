@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.example.misho.login.BookinfoActivity;
 import com.example.misho.login.R;
 import com.example.misho.login.SearchActivity;
 import com.facebook.common.logging.FLog;
@@ -161,6 +162,11 @@ public class ViewPagerActivity extends AppCompatActivity {
     ViewPager vpGallery;
     EditText etchange;
     TextView textView1;
+
+    public void bookinfo(View v){
+        Intent bookinfoactivity = new Intent(this,BookinfoActivity.class);
+        startActivity(bookinfoactivity);
+    }
 
     public void changepage(View v){
 
