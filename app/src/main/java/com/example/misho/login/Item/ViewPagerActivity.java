@@ -1,6 +1,5 @@
 package com.example.misho.login.Item;
 
-import android.content.Intent;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -14,8 +13,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.misho.login.BookinfoActivity;
-import com.example.misho.login.Item.facebook.samples.zoomable.ZoomableDraweeView;
 import com.example.misho.login.R;
+import com.example.misho.login.SearchActivity;
 import com.facebook.common.logging.FLog;
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.facebook.drawee.drawable.ProgressBarDrawable;
@@ -23,6 +22,122 @@ import com.facebook.drawee.drawable.ScalingUtils;
 import com.facebook.drawee.generic.GenericDraweeHierarchy;
 import com.facebook.drawee.generic.GenericDraweeHierarchyBuilder;
 
+import com.example.misho.login.Item.facebook.samples.zoomable.ZoomableDraweeView;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
+import android.annotation.TargetApi;
+import android.app.LoaderManager.LoaderCallbacks;
+import android.content.Context;
+import android.content.CursorLoader;
+import android.content.Intent;
+import android.content.Loader;
+import android.content.pm.PackageManager;
+import android.database.Cursor;
+import android.net.Uri;
+import android.os.AsyncTask;
+import android.os.Build;
+import android.os.Bundle;
+import android.provider.ContactsContract;
+import android.support.annotation.NonNull;
+//import android.support.design.widget.Snackbar;
+//import android.support.design.widget.TextInputLayout;
+import android.support.v7.app.AppCompatActivity;
+import android.text.TextUtils;
+import android.util.Log;
+import android.view.KeyEvent;
+import android.view.Menu;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.inputmethod.EditorInfo;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
+import java.io.IOException;
+import java.util.ArrayList;
+
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.util.EntityUtils;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
+
+import static android.Manifest.permission.READ_CONTACTS;
+
+import android.content.Intent;
+import android.support.v7.app.AppCompatActivity;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Toast;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
+import android.annotation.TargetApi;
+import android.app.LoaderManager.LoaderCallbacks;
+import android.content.Context;
+import android.content.CursorLoader;
+import android.content.Intent;
+import android.content.Loader;
+import android.content.pm.PackageManager;
+import android.database.Cursor;
+import android.net.Uri;
+import android.os.AsyncTask;
+import android.os.Build;
+import android.os.Bundle;
+import android.provider.ContactsContract;
+import android.support.annotation.NonNull;
+
+import android.support.v7.app.AppCompatActivity;
+import android.text.TextUtils;
+import android.util.Log;
+import android.view.KeyEvent;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.inputmethod.EditorInfo;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -36,8 +151,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
-//import android.support.design.widget.Snackbar;
-//import android.support.design.widget.TextInputLayout;
+import static android.Manifest.permission.READ_CONTACTS;
 
 public class ViewPagerActivity extends AppCompatActivity {
     List<String> pagesStr = new ArrayList<String>();
@@ -45,22 +159,25 @@ public class ViewPagerActivity extends AppCompatActivity {
     private ViewItemTask mAuthTask = null;
     int i = 0;
     int j = 0;
+   int input=0;
     ViewPager vpGallery;
     EditText etchange;
     TextView textView1;
-    int number;
+    String stringnumber;
+
+
     public void bookinfo(View v){
         Intent bookinfoactivity = new Intent(this,BookinfoActivity.class);
         startActivity(bookinfoactivity);
     }
 
     public void changepage(View v){
-
-        String stringnumber = etchange.getText().toString();
+        stringnumber = etchange.getText().toString();
         if (!(stringnumber.matches(""))) {
+            input=1;
             vpGallery.setCurrentItem(Integer.parseInt(stringnumber) - 1);
             textView1.setText(Integer.parseInt(stringnumber)  + "/" + pagesStr.size());
-            //// TODO: 13/09/16 fix page number after change ( Mostafa ) 
+            //// TODO: 13/09/16 fix page number after change ( Mostafa )
         }
 
     }
@@ -256,54 +373,87 @@ public class ViewPagerActivity extends AppCompatActivity {
         public Object instantiateItem(ViewGroup container, int position) {
 
 
-            if(j==0) {
-                textView1.setText(position + "/" + items.size());
-                textView1.setTextSize(20);
-                if(position==items.size()-1){
-                    i=1;
+
+                if(input != 1) {
+                    if (j == 0) {
+                        textView1.setText(position + "/" + items.size());
+                        textView1.setTextSize(20);
+                        input = 2;
+                        if (position == items.size() - 1) {
+                            i = 1;
+                        }
+                    }
+                    if (j == 1) {
+                        input = 2;
+                        textView1.setText(items.size() - 1 + "/" + items.size());
+                        j = 0;
+                    }
                 }
-            }
-            if(j==1){
-                textView1.setText(items.size()-1 + "/" + items.size());
-                j=0;
-            }
 
-            ZoomableDraweeView view = new ZoomableDraweeView(container.getContext());
-            view.setController(
-                    Fresco.newDraweeControllerBuilder()
-                            .setUri(Uri.parse(items.get(position)))
-                            .build());
+                ZoomableDraweeView view = new ZoomableDraweeView(container.getContext());
+                view.setController(
+                        Fresco.newDraweeControllerBuilder()
+                                .setUri(Uri.parse(items.get(position)))
+                                .build());
 
 
+                GenericDraweeHierarchy hierarchy =
+                        new GenericDraweeHierarchyBuilder(container.getResources())
+                                .setActualImageScaleType(ScalingUtils.ScaleType.FIT_CENTER)
+                                .setProgressBarImage(new ProgressBarDrawable())
+                                .build();
 
-            GenericDraweeHierarchy hierarchy =
-                    new GenericDraweeHierarchyBuilder(container.getResources())
-                            .setActualImageScaleType(ScalingUtils.ScaleType.FIT_CENTER)
-                            .setProgressBarImage(new ProgressBarDrawable())
-                            .build();
-
-            view.setHierarchy(hierarchy);
-
-
-            container.addView(view,
-                    ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+                view.setHierarchy(hierarchy);
 
 
-            return view;
+                container.addView(view,
+                        ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+
+
+                return view;
+
         }
 
         @Override
         public void destroyItem(ViewGroup container, int position, Object object) {
 
-            if(i==0){
-                textView1.setText((position - 1) + "/" + items.size());
 
-            }
-            else {
-                j=1;
-                textView1.setText(items.size() + "/" + items.size());
-                i=0;
-            }
+               // if (etchange.getText().equals("")) {
+                   if(input==2) {
+                       if (i == 0) {
+                           textView1.setText((position - 1) + "/" + items.size());
+                             input=0;
+
+                       } else {
+                           input=0;
+                           j = 1;
+                           textView1.setText(items.size() + "/" + items.size());
+                           i = 0;
+                       }
+                   }
+
+                     //  input--;
+
+               // }
+            if(input==1) {
+
+                        textView1.setText(Integer.parseInt(stringnumber) + "/" + pagesStr.size());
+                    //position=Integer.parseInt(stringnumber)-1;
+                   // etchange.clearComposingText();
+                    etchange.setText("");
+                   // input++;
+                    if(etchange.getText().equals("")){
+                       // input=1;
+                    }
+
+                  //  stringnumber=etchange.toString();
+
+               input=0;
+                }
+          //  input=0;
+
+
+
 
             container.removeView((View) object);
 
