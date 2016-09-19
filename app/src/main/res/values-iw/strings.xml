@@ -1,0 +1,30 @@
+<resources>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">דואר אלקטרוני</string>
+    <string name="prompt_password">סיסמה</string>
+    <string name="action_sign_in">היכנס</string>
+    <string name="action_continue_as_a_guest">המשך כאורח</string>
+    <string name="have_account">אין לך חשבון?</string>
+    <string name="action_sign_up_short">הירשם</string>
+    <string name="text_sign_up2"><u>הירשם.</u></string>
+    <string name="action_sign_in_short">היכנס</string>
+    <string name="error_invalid_email">כתובת הדואר האלקטרוני אינה חוקית</string>
+    <string name="error_invalid_password">הסיסמה קצרה מדי</string>
+    <string name="error_incorrect_password">הסיסמה שגויה</string>
+    <string name="error_field_required">שדה חובה</string>
+    <string name="prompt_firstname">שם פרטי</string>
+    <string name="prompt_lastname">שם משפחה</string>
+    <string name="about_details">האוסף מכיל אלפי ספרים, מגוון רחב של עיתונים מראשית המאה ה-20 וכ-200 כתבי עת ועיתונים בשפה הערבית, הפרסית והתורכית היוצאים לאור בימינו. בנוסף, קיים אוסף עשיר של כ-2,200 כתבי יד בערבית ובפרסית.</string>
+    <string name="permission_rationale">הרשאות אנשי קשר נדרשות לשם השלמת פרטי אימייל.</string>
+    <string-array name="Gender_array">
+        <item>Gender</item>
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+    <string-array name="UserType_array">
+        <item>Account type</item>
+        <item>Regular</item>
+        <item>Curator</item>
+    </string-array>
+</resources>

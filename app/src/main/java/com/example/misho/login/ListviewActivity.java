@@ -1,7 +1,6 @@
 package com.example.misho.login;
 
 import android.annotation.TargetApi;
-import android.app.ActionBar;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -15,14 +14,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
-//import com.example.misho.login.Item.ViewPagerActivity;
-import  com.example.misho.login.Item.ViewPagerActivity;
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.io.IOException;
-import java.util.ArrayList;
+import com.example.misho.login.Item.ViewPagerActivity;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -30,6 +22,14 @@ import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.util.EntityUtils;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.IOException;
+import java.util.ArrayList;
+
+//import com.example.misho.login.Item.ViewPagerActivity;
 
 public class ListviewActivity extends Activity {
 
@@ -116,10 +116,12 @@ public class ListviewActivity extends Activity {
                         JSONObject object = jarray.getJSONObject(i);
                         Book currentbook = new Book();
                         currentbook.setRecordid(object.getString("recordId"));
-                        currentbook.setTitle(object.getString("title"));
-                        currentbook.setCreationdate(object.getString("creationdate"));
-                        currentbook.setPublisher(object.getString("publisher"));
-                        currentbook.setAuthor(object.getString("author"));
+                        String  mishel = new String(object.getString("author").getBytes("ISO-8859-1"), "UTF-8");
+                        currentbook.setTitle(new String(object.getString("title").getBytes("ISO-8859-1"), "UTF-8"));
+                        currentbook.setCreationdate(new String (object.getString("creationdate").getBytes("ISO-8859-1"), "UTF-8"));
+                        currentbook.setPublisher(new String(object.getString("publisher").getBytes("ISO-8859-1"), "UTF-8"));
+                        currentbook.setAuthor(mishel);
+                        //   currentbook.setAuthor(object.getString("author"));
                         bookList.add(currentbook);
                     }
                     return true;

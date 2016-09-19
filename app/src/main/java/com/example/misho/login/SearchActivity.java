@@ -41,7 +41,7 @@ public class SearchActivity extends AppCompatActivity {
         fromyear = (EditText) findViewById(R.id.fromyear_editText);
         toyear = (EditText) findViewById(R.id.toYear_editText);
         searchbutton = (Button) findViewById(R.id.searchbtn);
-        final String _SEARCH_URL = "http://52.29.110.203:8080/LibArab/search/booktitle?";
+        final String _SEARCH_URL = Params.server+"search/booktitle?";
 
 
         searchbutton.setOnClickListener(new View.OnClickListener(){
@@ -49,9 +49,9 @@ public class SearchActivity extends AppCompatActivity {
                 //perform action on click
 
                 Uri builtUri = Uri.parse(_SEARCH_URL).buildUpon()
-                        .appendQueryParameter("userId",    "23")
+                        .appendQueryParameter("userId",    "4")
                        // .appendQueryParameter("title",    title.getText().toString())
-                        .appendQueryParameter("title",    "any")
+                        .appendQueryParameter("title",    "تاريخ")
                         .appendQueryParameter("fromyear", fromyear.getText().toString())
                         .appendQueryParameter("toyear",   toyear.getText().toString())
                         .build();

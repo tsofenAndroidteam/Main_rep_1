@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources> <string name="prompt_email">البريد الإلكتروني</string>
+    <string name="prompt_password">كلمه السر</string>
+    <string name="action_sign_in">تسجيل الدخول</string>
+    <string name="action_continue_as_a_guest">ادخل كزائر</string>
+    <string name="have_account">ليس لديك حساب؟</string>
+    <string name="action_sign_up_short">سجل</string>
+    <string name="text_sign_up2"><u>سجل.</u></string>
+    <string name="action_sign_in_short">تسجيل الدخول</string>
+    <string name="error_invalid_email">البريد الإلكتروني غير صالحة</string>
+    <string name="error_invalid_password">كلمة المرور قصيرة</string>
+    <string name="error_incorrect_password">كلمة المرور غير صحيحة</string>
+    <string name="error_field_required">هذه الخانة الزاميه</string>
+    <string name="prompt_firstname">الاسم الشخصي</string>
+    <string name="prompt_lastname">اسم العائلة</string>
+    <string name="about_details">האוסף מכיל אלפי ספרים, מגוון רחב של עיתונים מראשית המאה ה-20 וכ-200 כתבי עת ועיתונים בשפה הערבית, הפרסית והתורכית היוצאים לאור בימינו. בנוסף, קיים אוסף עשיר של כ-2,200 כתבי יד בערבית ובפרסית.</string>
+    <string name="permission_rationale">محتاج اذن لجهات اتصال لتوفير اكمال بريد إلكتروني.</string>
+    <string-array name="Gender_array">
+        <item>جنس</item>
+        <item>ذكر</item>
+        <item>أنثى</item>
+    </string-array>
+    <string-array name="UserType_array">
+        <item>نوع الحساب</item>
+        <item>عادي</item>
+        <item>أمين مكتبة</item>
+    </string-array>
+    <string name="app_name" translatable="false"></string>
+</resources>
