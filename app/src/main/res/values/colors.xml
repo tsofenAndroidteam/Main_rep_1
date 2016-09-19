@@ -7,8 +7,8 @@
     <color name="black">#000000</color>
     <color name="indigo_blue">#3F51B5</color>
     <color name="colorError">#F44336</color>
-    <color name="buttonColor">#f0878787</color>
-    <color name="buttonClickColor">#f0878787</color>
+    <color name="buttonColor">#DCEDC8</color>
+    <color name="buttonClickColor">#C5E1A5</color>
     <color name="colorSearch">#e0b26d</color>
     <color name="colorBibilo">#7775ad</color>
     <color name="colorFav">#66BB6A</color>

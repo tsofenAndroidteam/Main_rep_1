@@ -116,12 +116,16 @@ public class ListviewActivity extends Activity {
                         JSONObject object = jarray.getJSONObject(i);
                         Book currentbook = new Book();
                         currentbook.setRecordid(object.getString("recordId"));
-                        String  mishel = new String(object.getString("author").getBytes("ISO-8859-1"), "UTF-8");
-                        currentbook.setTitle(new String(object.getString("title").getBytes("ISO-8859-1"), "UTF-8"));
+                        String  author = new String(object.getString("author").getBytes("ISO-8859-1"), "UTF-8");
+                        author = author.replace("?","");
+                        //currentbook.setTitle(new String(object.getString("title").getBytes("ISO-8859-1"), "UTF-8"));
+                        String  title = new String(object.getString("title").getBytes("ISO-8859-1"), "UTF-8");
+                        title = title.replace("?","");
+                        currentbook.setTitle(title);
                         currentbook.setCreationdate(new String (object.getString("creationdate").getBytes("ISO-8859-1"), "UTF-8"));
                         currentbook.setPublisher(new String(object.getString("publisher").getBytes("ISO-8859-1"), "UTF-8"));
-                        currentbook.setAuthor(mishel);
-                        //   currentbook.setAuthor(object.getString("author"));
+                        currentbook.setAuthor(author);
+                      //  currentbook.setAuthor(new String(object.getString("author").getBytes("ISO-8859-1"), "UTF-8"));
                         bookList.add(currentbook);
                     }
                     return true;
