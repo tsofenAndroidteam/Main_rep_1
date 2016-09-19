@@ -46,7 +46,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
-
 import static android.Manifest.permission.READ_CONTACTS;
 
 
@@ -67,12 +66,12 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         Locale locale = new Locale("iw");
         Locale.setDefault(locale);
         Configuration config = new Configuration();
         config.locale = locale;
         getBaseContext().getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
-        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         ImageView imageView = (ImageView) findViewById(R.id.logo);
         imageView.setImageResource(R.drawable.logo);
@@ -114,6 +113,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         mProgressView = findViewById(R.id.login_progress);
 
     }
+
 
     private void populateAutoComplete() {
 

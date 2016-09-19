@@ -51,7 +51,7 @@ public class SearchActivity extends AppCompatActivity {
                 Uri builtUri = Uri.parse(_SEARCH_URL).buildUpon()
                         .appendQueryParameter("userId",    "4")
                        // .appendQueryParameter("title",    title.getText().toString())
-                        .appendQueryParameter("title",    "تاريخ")
+                        .appendQueryParameter("title",    title.getText().toString())
                         .appendQueryParameter("fromyear", fromyear.getText().toString())
                         .appendQueryParameter("toyear",   toyear.getText().toString())
                         .build();

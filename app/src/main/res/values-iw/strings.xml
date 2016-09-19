@@ -27,4 +27,10 @@
         <item>Regular</item>
         <item>Curator</item>
     </string-array>
+    <string name="menu_about">אוֹדוֹת</string>
+    <string name="menu_bibliography">בִּיבּלִיוֹגְרָפִיָה</string>
+    <string name="menu_favorites">מועדפים</string>
+    <string name="menu_search">חיפוש</string>
+    <string name="menu_settings">הגדרות</string>
+    <string name="menu_trivia">טריוויה</string>
 </resources>
